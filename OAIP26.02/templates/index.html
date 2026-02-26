@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinja2 - Практическая работа</title>
+</head>
+<body>
+    <h1>Результат</h1>
+    {% if text %}
+    <p>{{ text }}</p>
+    {% endif %}
+
+    {% if r and pi %}
+    <p>Площадь круга с радиусом {{ r }} равна {{ pi * r * r }}</p>
+    {% endif %}
+</body>
+</html>
