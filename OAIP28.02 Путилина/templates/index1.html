@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Среднее число</h1>
+    <p>Числа: a = {{ a }}, b = {{ b }}, c = {{ c }}</p>
+
+    {% if (a >= b and a <= c) or (a >= c and a <= b) %}
+        <p>Среднее число: {{ a }}</p>
+    {% elif (b >= a and b <= c) or (b >= c and b <= a) %}
+        <p>Среднее число: {{ b }}</p>
+    {% else %}
+        <p>Среднее число: {{ c }}</p>
+    {% endif %}
+</body>
+</html>
