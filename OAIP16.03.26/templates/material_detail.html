@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ material.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ material.title }}</h1>
+    <p><strong>ID:</strong> {{ material.id }}</p>
+    <p><strong>Категория:</strong> {{ material.category }}</p>
+    <p><strong>Автор:</strong> {{ material.author }}</p>
+    <p><strong>Описание:</strong> {{ material.description }}</p>
+    <a href="/materials">← Назад к списку</a>
+{% endblock %}
