@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход на сайт</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Вход</a> |
+        <a href="/me">Главная</a> |
+        <a href="/about">Обо мне</a>
+    </nav>
+    <hr>
+
+    <h1>Страница входа</h1>
+
+    <form method="POST" action="/login">
+        <label>Логин:</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label>Пароль:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Войти</button>
+    </form>
+
+    {% if message %}
+        <p style="color: {% if message_type == 'success' %}green{% else %}red{% endif %};">
+            {{ message }}
+        </p>
+    {% endif %}
+
+    {% if show_link %}
+        <br>
+        <a href="/me">Перейти на страницу /me (login)</a>
+    {% endif %}
+</body>
+</html>

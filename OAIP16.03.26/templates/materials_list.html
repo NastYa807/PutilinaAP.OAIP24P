@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Список материалов{% endblock %}
+
+{% block content %}
+    <h1>Список материалов</h1>
+
+    {% if materials %}
+        {% for material in materials %}
+            <div style="border: 1px solid black; margin: 10px; padding: 10px;">
+                <h3>{{ material.title }}</h3>
+                <p>Автор: {{ material.author }}</p>
+                <p>Категория: {{ material.category }}</p>
+                <p>Описание: {{ material.description[:50] }}...</p>
+                <a href="/materials/{{ material.id }}">Подробнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Материалов нет</p>
+    {% endif %}
+{% endblock %}
