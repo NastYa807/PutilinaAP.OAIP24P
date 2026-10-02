@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>КАТАЛОГ КИНОШКИ</title>
+</head>
+
+<body>
+
+<h1>Мои Фильмы/Сериалы</h1>
+
+{% for movie in movies %}
+
+    <h2>{{ movie.title }}</h2>
+
+    <p>ГОД: {{ movie.year }}</p>
+    <p>ЖАНР: {{ movie.genre }}</p>
+    <p>РЕЙТИНГ: {{ movie.rating }}</p>
+
+    <a href="/movie/{{ movie.id }}">Подробнее</a>
+
+    <hr>
+
+{% endfor %}
+
+</body>
+</html>
